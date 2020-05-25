@@ -14,17 +14,19 @@ class CreateEpisodesTable extends Migration
     public function up()
     {
         Schema::create('episodes', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
             $table->string('title');
             $table->string('permalink');
-            $table->enum('visibility', ['public','private','limited']);
+            $table->enum('visibility', ['PUBLIC', 'PRIVATE', 'LIMITED']);
             $table->text('description');
             $table->boolean('explicit');
             $table->boolean('downloadable');
             $table->dateTime('publish_date');
 
-            $table->bigInteger('show_id')->unsigned();
+            $table->uuid('show_id');
             $table->foreign('show_id')->references('id')->on('shows')->onDelete('cascade');
+
+            $table->primary('id');
 
             $table->timestamps();
         });

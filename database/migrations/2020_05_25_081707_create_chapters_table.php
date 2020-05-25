@@ -14,14 +14,16 @@ class CreateChaptersTable extends Migration
     public function up()
     {
         Schema::create('chapters', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
             $table->time('time');
             $table->string('title');
             $table->string('image');
             $table->string('link');
 
-            $table->bigInteger('episode_id')->unsigned();
+            $table->uuid('episode_id');
             $table->foreign('episode_id')->references('id')->on('episodes')->onDelete('cascade');
+
+            $table->primary('id');
 
             $table->timestamps();
         });

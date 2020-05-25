@@ -14,7 +14,7 @@ class CreateShowsTable extends Migration
     public function up()
     {
         Schema::create('shows', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
             $table->string('title');
             $table->string('subtitle');
             $table->text('summary');
@@ -26,6 +26,8 @@ class CreateShowsTable extends Migration
             $table->string('email');
             $table->string('author');
             $table->boolean('explicit');
+
+            $table->primary('id');
 
             $table->timestamps();
         });

@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/me', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/shows', 'api\ShowController');
+Route::post('/auth/token', 'api\AuthController@token');
+
+Route::middleware('auth:sanctum')->apiResource('/shows', 'api\ShowController');
+Route::middleware('auth:sanctum')->apiResource('/episodes', 'api\EpisodeController');
