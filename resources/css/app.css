@@ -3,3 +3,52 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body{
+    @apply .bg-gray-100;
+    background-image: url("../images/tour_metallique.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+
+label {
+    @apply .block .text-gray-700 .text-xs .uppercase .font-bold mb-2;
+}
+
+.full-page-card-container{
+    @apply .w-full .flex .flex-wrap .justify-center .items-center .h-screen;
+}
+
+.full-page-card-card{
+    @apply .break-words .bg-white .rounded .shadow-md;
+}
+
+.f-form-error{
+    @apply .text-red-500 .text-xs .italic .mt-4;
+}
+
+.f-form-item{
+    @apply .flex .flex-wrap .mb-6;
+}
+
+.f-form-input{
+    @apply .form-input .w-full;
+}
+
+.f-form-input.error{
+    @apply .border-red-500;
+}
+
+
+.f-button{
+    @apply .bg-gray-900 .text-gray-100 .text-xs .font-bold .py-3 .px-8 .rounded;
+}
+
+.f-button:hover{
+    @apply .bg-gray-800;
+}
+
+.f-button:focus{
+    @apply .outline-none .shadow-outline;
+}
