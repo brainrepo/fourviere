@@ -23,6 +23,8 @@
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0",
         "tailwindcss": "^1.4",
-        "vue-template-compiler": "^2.6.11"
+        "vue-template-compiler": "^2.6.11",
+        "crypto-js": "^4.0.0",
+        "react-router-dom": "^5.2.0"
     }
 }
