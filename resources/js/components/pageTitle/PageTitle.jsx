@@ -8,7 +8,7 @@ export default ({title, subTitle, icon = null, right = null}) => {
             </div>}
             <div>
                 <h1 className={'text-lg text-gray-900 font-bold leading-none mb-1 capitalize'}>{title}</h1>
-                <h2 className={'text-xs text-gray-500 uppercase leading-none'}>{subTitle}</h2>
+                <h2 className={'text-xs text-gray-500 uppercase leading-none font-bold'}>{subTitle}</h2>
             </div>
         </div>
 
